@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "id": "componentSchema",
+    "$id": "componentSchema",
     "title": "component options schema.",
     "type": "object",
     "descripiton": "创建一个component范本",

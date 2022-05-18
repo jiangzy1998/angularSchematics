@@ -29,16 +29,20 @@ export function genComponent(_options: any): Rule {
 function getParsePath(tree:Tree, options:any):any{
   // 读取 angular.json 文件并存为buffer
   const workspaceConfigBuffer = tree.read('angular.json');
+  
   // 判断是不是在一个 angular-cli 工作区
   if(!workspaceConfigBuffer){
     throw new SchematicsException("不在angular cli工作区,请在angular项目中执行!");
   }
   // 读取并整理angular配置
   const workspaceConfig = JSON.parse(workspaceConfigBuffer.toString());
+  console.log(workspaceConfig);
   // 有传入 project 属性或者是默认 project
   const projectName = options.project || workspaceConfig.defaultProject;
+  console.log(projectName);
   // 获取project 定义
   const project = workspaceConfig.projects[projectName];
+  console.log(project);
   // 获取默认project路径
   const defaultProjectPath = buildDefaultPath(project);
   // parseName()可以把
