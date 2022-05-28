@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = <% if (defaultLanguage === 'zh-cn') { %>'你好'<% } else { %>'Hello'<% } %>;
+  title = '你好';
 }
