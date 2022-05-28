@@ -39,12 +39,13 @@ function getParsePath(tree:Tree, options:any):any{
   console.log(workspaceConfig);
   // 有传入 project 属性或者是默认 project
   const projectName = options.project || workspaceConfig.defaultProject;
-  console.log(projectName);
+  console.log("projectName",projectName);
   // 获取project 定义
-  const project = workspaceConfig.projects[projectName];
-  console.log(project);
+  const project = workspaceConfig.projects.get(projectName);
+  console.log("project",project);
   // 获取默认project路径
   const defaultProjectPath = buildDefaultPath(project);
+  console.log("defaultProjectPath",defaultProjectPath);
   // parseName()可以把
   const parsePath = parseName(defaultProjectPath, options.name);
 

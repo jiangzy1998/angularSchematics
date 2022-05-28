@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id":"SchematicsNgAdd",
+    "title": "Ng Option Schema",
+    "type":"object",
+    "properties": {
+        "defaultLanguage":{
+            "type":"string",
+            "description": "Choosee the default language",
+            "default":"zh-cn",
+            "x-prompt":{
+                "message":"Please choose the default language you want to use:",
+                "type":"list",
+                "items":[
+                    {
+                        "value":"zh-cn",
+                        "label":"简体中文(zh-cn)"
+                    },
+                    {
+                        "value":"en-us",
+                        "label":"English(en-us)"
+                    }
+                ]
+            }
+        },
+        "i18n":{
+            "type":"boolean",
+            "default":true,
+            "description": "Could i18n for the project",
+            "x-prompt": "Would you like to add i18n? (default: Y)"
+        }
+    }
+}
